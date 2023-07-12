@@ -4,28 +4,18 @@
  * Created Date: 2023-06-16
  */
 
-import React from 'react';
-import { Route, Navigate } from 'react-router-dom';
+import React from "react";
+import { Navigate } from "react-router-dom";
 
 /**
  * This function helps to check the conditions before accessing the route
  */
-const ProtectedRoute = ({ component: Component, layout: Layout, ...rest }) => {
-  if (true) {
+const ProtectedRoute = ({ children }) => {
+  if (!true) {
     return <Navigate to="/login" />;
   }
 
-  return (
-    <Route
-      {...rest}
-      element={
-        <Layout>
-          <Component />
-        </Layout>
-      }
-    />
-  );
+  return children;
 };
 
 export { ProtectedRoute };
-
