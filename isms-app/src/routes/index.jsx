@@ -23,17 +23,17 @@ const privateRoutes = [
   },
   {
     path: ROUTES_PATHS.ADMIN_TICKET,
-    component: Page.Dashboard,
+    component: Page.AdminTicket,
     layout: Layout.AdminLayout,
   },
   {
     path: ROUTES_PATHS.ADMIN_USER,
-    component: Page.Dashboard,
+    component: Page.AdminUser,
     layout: Layout.AdminLayout,
   },
   {
     path: ROUTES_PATHS.ADMIN_REPORT,
-    component: Page.Dashboard,
+    component: Page.AdminReport,
     layout: Layout.AdminLayout,
   },
   {

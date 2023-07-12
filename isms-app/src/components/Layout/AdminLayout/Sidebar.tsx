@@ -30,12 +30,12 @@ const sidebarMenus = {
     {
       icon: "/images/icon-setting.svg",
       label: "Setting",
-      href: ROUTES_PATHS.ADMIN_SETTING,
+      // href: ROUTES_PATHS.ADMIN_SETTING,
     },
     {
       icon: "/images/icon-contact.svg",
       label: "Contact us",
-      href: ROUTES_PATHS.ADMIN_CONTACT,
+      // href: ROUTES_PATHS.ADMIN_CONTACT,
     },
   ],
 };
@@ -49,7 +49,7 @@ const MenuList = ({ menus, currentPath, onNavigate }) => {
           <li
             key={item.label}
             onClick={() => {
-              onNavigate(item?.href);
+              if (item?.href) onNavigate?.(item?.href);
             }}
             className={clsx(
               "flex space-x-4 items-center pr-5 rounded-l-[20px] py-4 text-2xl cursor-pointer transition-all",
