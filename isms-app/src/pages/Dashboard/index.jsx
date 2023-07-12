@@ -6,6 +6,7 @@ import {
 } from "../../components/Filter/InitState";
 import FilterDropdownSelect from "../../components/Filter/DropdownSelect";
 import { useState } from "react";
+import CardStatistic from "../../components/Overview/CardStatistic";
 
 const Dashboard = () => {
   const [ticketTypesSelected, setTicketTypesSelected] = useState(ticketTypes);
@@ -13,6 +14,16 @@ const Dashboard = () => {
     useState(ticketPriorities);
   const [ticketStatusSelected, setTicketStatusSelected] =
     useState(ticketStatus);
+
+  const ticketTypesSelectedNormalized = ticketTypesSelected?.map(
+    (item) => item?.value
+  );
+  const ticketPrioritiesSelectedNormalized = ticketPrioritiesSelected?.map(
+    (item) => item?.value
+  );
+  const ticketStatusSelectedNormalized = ticketStatusSelected?.map(
+    (item) => item?.value
+  );
 
   return (
     <>
@@ -40,7 +51,39 @@ const Dashboard = () => {
         />
       </div>
       <div className="flex-1 overflow-y-auto">
-        <div className="py-[45px] px-10"></div>
+        <div className="py-[45px] px-10 grid grid-cols-3 gap-y-[60px] gap-x-[68px]">
+          {ticketStatusSelectedNormalized?.includes(
+            ticketStatus?.[0]?.value
+          ) && <CardStatistic title="Created Ticket" value={1253} />}
+          {ticketStatusSelectedNormalized?.includes(
+            ticketStatus?.[1]?.value
+          ) && <CardStatistic title="Pending Ticket" value={1253} />}
+          {ticketStatusSelectedNormalized?.includes(
+            ticketStatus?.[2]?.value
+          ) && <CardStatistic title="Solve Ticket" value={1253} />}
+          {ticketStatusSelectedNormalized?.includes(
+            ticketStatus?.[3]?.value
+          ) && <CardStatistic title="CLOSED TICKET" value={1598} />}
+
+          <CardStatistic title="USERS" value={100} />
+          {ticketTypesSelectedNormalized?.includes(ticketTypes?.[0]?.value) && (
+            <CardStatistic title="INCIDENT" value={1014} />
+          )}
+          {ticketTypesSelectedNormalized?.includes(ticketTypes?.[1]?.value) && (
+            <CardStatistic title="REQUEST" value={1291} />
+          )}
+          {ticketPrioritiesSelectedNormalized?.includes(
+            ticketPriorities?.[0]?.value
+          ) && <CardStatistic title="LOW PRIORITY TICKET" value={708} />}
+          {ticketPrioritiesSelectedNormalized?.includes(
+            ticketPriorities?.[1]?.value
+          ) && <CardStatistic title="MEDIUM PRIORITY TICKET" value={708} />}
+          {ticketPrioritiesSelectedNormalized?.includes(
+            ticketPriorities?.[2]?.value
+          ) && <CardStatistic title="HIGH PRIORITY TICKETS" value={901} />}
+          <CardStatistic title="RESOLUTION DURATION DAYS" value={124.84} />
+          <CardStatistic title="OPEN TICKET DURATION DAYS" value={124.84} />
+        </div>
       </div>
     </>
   );
