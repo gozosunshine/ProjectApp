@@ -1,16 +1,7 @@
 /* eslint-disable no-unused-vars */
+import { ROUTES_PATHS } from "../../constants";
 import * as Layout from "../components/Layout/";
 import * as Page from "../pages";
-
-const ROUTES_PATHS = {
-  DASHBOARD: "/dashboard",
-  ADMIN: "/admin",
-  ADMIN_TICKET: "/admin/dashboard",
-  ADMIN_USER: "/admin/user",
-  ADMIN_REPORT: "/admin/report",
-  ADMIN_SETTING: "/admin/setting",
-  ADMIN_CONTACT: "/admin/contact",
-};
 
 /* layout: null ko import layout nào cả
    layout: custom custom layout theo cách của ban!
@@ -26,10 +17,35 @@ const publicRoutes = [
 //private route: dành cho những route cần đăng nhập
 const privateRoutes = [
   {
-    path: ROUTES_PATHS.DASHBOARD,
+    path: ROUTES_PATHS.ADMIN,
+    component: Page.Dashboard,
+    layout: Layout.AdminLayout,
+  },
+  {
+    path: ROUTES_PATHS.ADMIN_TICKET,
+    component: Page.Dashboard,
+    layout: Layout.AdminLayout,
+  },
+  {
+    path: ROUTES_PATHS.ADMIN_USER,
+    component: Page.Dashboard,
+    layout: Layout.AdminLayout,
+  },
+  {
+    path: ROUTES_PATHS.ADMIN_REPORT,
+    component: Page.Dashboard,
+    layout: Layout.AdminLayout,
+  },
+  {
+    path: ROUTES_PATHS.ADMIN_SETTING,
+    component: Page.Dashboard,
+    layout: Layout.AdminLayout,
+  },
+  {
+    path: ROUTES_PATHS.ADMIN_CONTACT,
     component: Page.Dashboard,
     layout: Layout.AdminLayout,
   },
 ];
 
-export { publicRoutes, privateRoutes, ROUTES_PATHS };
+export { publicRoutes, privateRoutes };

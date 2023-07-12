@@ -47,7 +47,7 @@ const FilterDropdownSelect = ({
           }}
         >
           <span className="text-15px">{triggerLabel}</span>
-          <img src="./images/arrow-down.svg" alt="" />
+          <img src="/images/arrow-down.svg" alt="" />
         </button>
         <ul
           className={clsx(
