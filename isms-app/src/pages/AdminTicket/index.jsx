@@ -5,6 +5,9 @@ import {
   ticketStatus,
   ticketTypes,
 } from "../../components/Filter/InitState";
+import CardStatistic from "../../components/Overview/CardStatistic";
+import TableStatistic from "../../components/Overview/TableStatistic";
+import PieChart from "../../components/Overview/PieChart";
 
 const AdminTicket = () => {
   const [ticketTypesSelected, setTicketTypesSelected] = useState(ticketTypes);
@@ -49,7 +52,17 @@ const AdminTicket = () => {
         />
       </div>
       <div className="flex-1 overflow-y-auto">
-        <div className="py-[45px] px-10 grid grid-cols-3 gap-y-[60px] gap-x-[68px]"></div>
+        <div className="py-[45px] px-10 space-y-10 gap-y-[60px] gap-x-[68px]">
+          <div className="flex space-x-[60px]">
+            <CardStatistic title="Ticket" value={1253} className="w-[340px]" />
+            <TableStatistic />
+          </div>
+          <div className="grid grid-cols-3 gap-x-[30px]">
+            <PieChart title="Tickets by Type" />
+            <PieChart title="Tickets by Type" />
+            <PieChart title="Tickets by Type" />
+          </div>
+        </div>
       </div>
     </>
   );
