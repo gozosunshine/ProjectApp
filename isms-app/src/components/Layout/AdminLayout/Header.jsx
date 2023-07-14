@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="bg-[#7F91B0] py-7 pl-[70px] pr-12 flex justify-between">
+    <header className="bg-[#7F91B0] py-7 pl-[70px] pr-12 flex justify-between">
       <h6 className="text-white text-2xl lg:text-3xl font-bold">Dashboard</h6>
       <div className="flex space-x-10">
         <img
@@ -20,7 +20,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

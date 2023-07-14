@@ -1,17 +1,13 @@
 import clsx from "clsx";
 import React from "react";
+import ChartCritical from "./ChartCritical";
 
 const Label = ({ index, label }) => {
   let color = "bg-[#2C834E]";
   if (index === 1) color = "bg-[#FA8418]";
   if (index === 2) color = "bg-[#F61E1E]";
   if (index === 3) color = "bg-[#48B8F6]";
-  return (
-    <div className="flex space-x-4 items-center">
-      <span className={clsx(color, "w-2.5 h-2.5 rounded-full")}></span>
-      <span className="text-xs">{label}</span>
-    </div>
-  );
+  return <ChartCritical color={color} label={label} />;
 };
 
 const PieChart = ({ data, title, index }) => {

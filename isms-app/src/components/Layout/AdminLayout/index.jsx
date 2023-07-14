@@ -9,7 +9,7 @@ const AdminLayout = ({ children }) => {
       <div className="pl-[300px] bg-[#E3E9E9] w-full h-screen flex flex-col">
         <Header />
 
-        <div className="flex-1 flex flex-col overflow-y-auto">{children}</div>
+        <main className="flex-1 flex flex-col overflow-y-auto">{children}</main>
       </div>
     </div>
   );
