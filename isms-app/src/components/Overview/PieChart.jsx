@@ -9,15 +9,15 @@ const Label = ({ index, label }) => {
   return (
     <div className="flex space-x-4 items-center">
       <span className={clsx(color, "w-2.5 h-2.5 rounded-full")}></span>
-      <span className="text-sm">{label}</span>
+      <span className="text-xs">{label}</span>
     </div>
   );
 };
 
-const PieChart = ({ data, title }) => {
+const PieChart = ({ data, title, index }) => {
   return (
-    <div className="border border-black">
-      <div className="flex justify-between border-b-2 shadow-xl border-black items-center px-4 py-2 bg-[#E7E7E7]">
+    <div className="border border-black shadow-xl">
+      <div className="flex justify-between border-b-2 border-black items-center px-4 py-2 bg-[#E7E7E7]">
         <div className="flex items-center space-x-2">
           <img src="/images/icon-drag.svg" alt="" />
           <span className="text-xs font-bold">{title}</span>
@@ -25,12 +25,15 @@ const PieChart = ({ data, title }) => {
         <img src="/images/icon-menu.svg" alt="" />
       </div>
       <div className="p-5 space-y-5 bg-white">
-        <div className="flex space-x-3 flex-wrap justify-center">
-          <Label index={0} label={"Request"} />
-          <Label index={1} label={"Incident"} />
+        <div className="grid grid-cols-2 w-[230px] mx-auto">
+          {data?.map((item, index) => (
+            <Label key={item?.label} index={index} label={item?.label} />
+          ))}
         </div>
         <div className="flex justify-center">
-          <img src="/images/type-circle.png" alt="" />
+          {index === 0 && <img src="/images/type-circle.png" alt="" />}
+          {index === 1 && <img src="/images/priority-circle.png" alt="" />}
+          {index === 2 && <img src="/images/status-circle.png" alt="" />}
         </div>
       </div>
     </div>

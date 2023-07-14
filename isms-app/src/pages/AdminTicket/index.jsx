@@ -16,15 +16,18 @@ const AdminTicket = () => {
   const [ticketStatusSelected, setTicketStatusSelected] =
     useState(ticketStatus);
 
-  const ticketTypesSelectedNormalized = ticketTypesSelected?.map(
-    (item) => item?.value
-  );
-  const ticketPrioritiesSelectedNormalized = ticketPrioritiesSelected?.map(
-    (item) => item?.value
-  );
-  const ticketStatusSelectedNormalized = ticketStatusSelected?.map(
-    (item) => item?.value
-  );
+  const dataByTypes = [{ label: "Request" }, { label: "Incident" }];
+  const dataByPriorities = [
+    { label: "Low" },
+    { label: "Medium" },
+    { label: "High" },
+  ];
+  const dataByStatus = [
+    { label: "Open" },
+    { label: "Solve" },
+    { label: "Pending" },
+    { label: "Closed" },
+  ];
 
   return (
     <>
@@ -58,9 +61,13 @@ const AdminTicket = () => {
             <TableStatistic />
           </div>
           <div className="grid grid-cols-3 gap-x-[30px]">
-            <PieChart title="Tickets by Type" />
-            <PieChart title="Tickets by Type" />
-            <PieChart title="Tickets by Type" />
+            <PieChart index={0} title="Tickets by Type" data={dataByTypes} />
+            <PieChart
+              index={1}
+              title="Tickets by Priority"
+              data={dataByPriorities}
+            />
+            <PieChart index={2} title="Tickets by Status" data={dataByStatus} />
           </div>
         </div>
       </div>
