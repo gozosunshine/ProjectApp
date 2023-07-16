@@ -27,7 +27,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <div className="bg-[#42526E] pl-[58px] pr-[70px] py-9 grid grid-cols-3 gap-y-5 gap-x-[92px]">
+      <div className="bg-[#42526E] py-4 px-8 xl:pl-[58px] xl:pr-[70px] xl:py-9 grid md:grid-cols-3 gap-y-5 gap-x-8 xl:gap-x-[92px]">
         <FilterDropdownSelect
           selectedValues={ticketTypesSelected}
           setSelectedValues={setTicketTypesSelected}
@@ -50,8 +50,8 @@ const Dashboard = () => {
           title="Ticket Status"
         />
       </div>
-      <div className="flex-1 overflow-y-auto">
-        <div className="py-[45px] px-10 grid grid-cols-3 gap-y-[60px] gap-x-[68px]">
+      <div className="flex-1 md:overflow-y-auto">
+        <div className="py-[45px] px-10 grid sm:grid-cols-3 gap-6 xl:gap-[60px]">
           {ticketStatusSelectedNormalized?.includes(
             ticketStatus?.[0]?.value
           ) && <CardStatistic title="Created Ticket" value={1253} />}

@@ -14,19 +14,19 @@ const AdminReport = () => {
 
   return (
     <>
-      <div className="bg-[#42526E] pl-[58px] pr-[70px] py-9 flex items-center justify-between">
+      <div className="bg-[#42526E] py-4 px-8 xl:pl-[58px] xl:pr-[70px] xl:py-9 flex flex-col md:flex-row items-start gap-4 md:items-center justify-between">
         <FilterDateRange
           selected={dateRanges}
           setSelected={setDateRanges}
           options={dateRangesOptions}
           placeholder="Select range"
           title="Date range"
-          className="w-[280px]"
+          className="w-full md:w-[280px]"
         />
         <BtnGenerateReport open={openDialog} setOpen={setOpenDialog} />
       </div>
       <div className="flex-1 overflow-y-auto">
-        <div className="py-[45px] px-10 space-y-[75px]">
+        <div className="py-[45px] px-10 space-y-8 xl:space-y-[75px]">
           <ColumnChart />
           <LineChartNewTicket />
           <LineChartSatisfaction />

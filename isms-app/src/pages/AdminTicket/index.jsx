@@ -31,7 +31,7 @@ const AdminTicket = () => {
 
   return (
     <>
-      <div className="bg-[#42526E] pl-[58px] pr-[70px] py-9 grid grid-cols-3 gap-y-5 gap-x-[92px]">
+      <div className="bg-[#42526E] py-4 px-8 xl:pl-[58px] xl:pr-[70px] xl:py-9 grid md:grid-cols-3 gap-y-5 gap-x-8 xl:gap-x-[92px]">
         <FilterDropdownSelect
           selectedValues={ticketTypesSelected}
           setSelectedValues={setTicketTypesSelected}
@@ -54,13 +54,17 @@ const AdminTicket = () => {
           title="Ticket Status"
         />
       </div>
-      <div className="flex-1 overflow-y-auto">
-        <div className="py-[45px] px-10 space-y-10 gap-y-[60px] gap-x-[68px]">
-          <div className="flex space-x-[60px]">
-            <CardStatistic title="Ticket" value={1253} className="w-[340px]" />
+      <div className="flex-1 md:overflow-y-auto">
+        <div className="py-[45px] px-10 space-y-6 xl:space-y-10 gap-6 xl:gap-y-[60px] xl:gap-x-[68px]">
+          <div className="flex flex-col gap-6 xl:flex-row xl:gap-x-[60px]">
+            <CardStatistic
+              title="Ticket"
+              value={1253}
+              className="w-full xl:w-[340px]"
+            />
             <TableStatistic />
           </div>
-          <div className="grid grid-cols-3 gap-x-[30px]">
+          <div className="grid gap-6 xl:grid-cols-3 xl:gap-x-[30px]">
             <PieChart index={0} title="Tickets by Type" data={dataByTypes} />
             <PieChart
               index={1}

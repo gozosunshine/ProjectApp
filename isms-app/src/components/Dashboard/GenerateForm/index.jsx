@@ -19,12 +19,12 @@ const GenerateForm = ({ setOpen }) => {
       className="flex flex-col flex-1 overflow-y-auto"
       // onSubmit={handleSubmit}
     >
-      <div className="flex-none text-2xl font-bold text-center py-7 bg-[#D9D9D9]">
+      <div className="flex-none text-lg xl:text-2xl font-bold text-center py-4 xl:py-7 bg-[#D9D9D9]">
         Generate Report
       </div>
-      <div className=" flex-1 overflow-y-auto text-sm border border-black py-10 pb=[18px] px-[26px] bg-white">
+      <div className=" flex-1 overflow-y-auto text-sm border border-black py-6 xl:py-10 px-[26px] bg-white">
         <div className="font-bold">Export and send report</div>
-        <div className="max-w-[650px] mx-auto mt-10 space-y-5">
+        <div className="max-w-[650px] mx-auto mt-6 xl:mt-10 space-y-5">
           <div className="flex flex-col">
             <label htmlFor={`file-name-${id}`}>File name</label>
             <input

@@ -15,19 +15,9 @@ const AdminUser = () => {
   const [ticketStatusSelected, setTicketStatusSelected] =
     useState(ticketStatus);
 
-  const ticketTypesSelectedNormalized = ticketTypesSelected?.map(
-    (item) => item?.value
-  );
-  const ticketPrioritiesSelectedNormalized = ticketPrioritiesSelected?.map(
-    (item) => item?.value
-  );
-  const ticketStatusSelectedNormalized = ticketStatusSelected?.map(
-    (item) => item?.value
-  );
-
   return (
     <>
-      <div className="bg-[#42526E] pl-[58px] pr-[70px] py-9 grid grid-cols-3 gap-y-5 gap-x-[92px]">
+      <div className="bg-[#42526E] py-4 px-8 xl:pl-[58px] xl:pr-[70px] xl:py-9 grid md:grid-cols-3 gap-y-5 gap-x-8 xl:gap-x-[92px]">
         <FilterDropdownSelect
           selectedValues={ticketTypesSelected}
           setSelectedValues={setTicketTypesSelected}
