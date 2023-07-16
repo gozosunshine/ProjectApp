@@ -5,8 +5,8 @@ import GenerateForm from "./GenerateForm";
 const BtnGenerateReport = ({ open, setOpen }) => {
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
-      <Dialog.Trigger>
-        <div className="bg-[#DCE4FF] px-[14px] py-3 space-x-1 flex items-center focus:outline-none">
+      <Dialog.Trigger className="focus:outline-none">
+        <div className="bg-[#DCE4FF] hover:bg-[#cfd3fd] px-[14px] py-3 space-x-1 flex items-center focus:outline-none">
           <span className="text-base">Generate report</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"

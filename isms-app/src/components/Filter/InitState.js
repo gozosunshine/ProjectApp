@@ -29,12 +29,12 @@ export const dateRangesOptions = [
   {
     value: RANGE_VALUES.LAST_WEEK,
     label: "Last 7 days",
-    subLabel: "(Mon , 1 May 2023 - Sun, 7 May 2023)",
+    subLabel: "Mon, 1 May 2023 - Sun, 7 May 2023",
   },
   {
     value: RANGE_VALUES.LAST_MONTH,
     label: "Last month",
-    subLabel: "(April 2023)",
+    subLabel: "April 2023",
   },
   {
     value: RANGE_VALUES.CURRENT_MONTH,

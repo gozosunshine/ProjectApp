@@ -84,7 +84,7 @@ const FilterDateRange = ({
                 >
                   <span
                     className={clsx(
-                      "text-10px hover:text-[#48B8F6]",
+                      "text-10px text-left hover:text-[#48B8F6]",
                       isSelected && "text-[#48B8F6]"
                     )}
                   >
