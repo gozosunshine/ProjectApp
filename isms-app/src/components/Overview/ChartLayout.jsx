@@ -5,7 +5,7 @@ const ChartLayout = ({ children, title, subTitle }) => {
     <section>
       <div
         className="text-lg bg-[#DBD9D9] px-4 py-[5px] text-center border-b border-black"
-        style={{ boxShadow: "0px 6px 4px 0px rgba(0, 0, 0, 0.20);" }}
+        style={{ boxShadow: "0px 6px 4px 0px rgba(0, 0, 0, 0.20)" }}
       >
         {title}
       </div>
