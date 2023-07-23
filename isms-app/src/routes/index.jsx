@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { ROUTES_PATHS } from "../../constants";
 import * as Layout from "../components/Layout/";
 import * as Page from "../pages";
