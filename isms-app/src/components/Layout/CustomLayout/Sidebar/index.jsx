@@ -81,7 +81,10 @@ function Sidebar() {
       </div>
       {sideBar[currentSidebar]}
       <div className="grow-0 shrink-0 h-[21%] border-t-2 border-[#C5C0C0] bg-[#fff] pt-[0.5rem] pl-[1.25rem] flex flex-col justify-end">
-        <div onClick={()=>changeSidebar(1)} className="flex mb-[1rem] cursor-pointer">
+        <div
+          onClick={() => changeSidebar(1)}
+          className="flex mb-[1rem] cursor-pointer"
+        >
           <GrServices className="text-[1.5rem] text-[#42526E]" />
           <h3 className="ml-[1rem] text-[#8D8888]">Service Setting</h3>
         </div>
