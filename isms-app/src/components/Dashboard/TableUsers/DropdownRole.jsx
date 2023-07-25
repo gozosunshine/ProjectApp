@@ -54,7 +54,7 @@ const DropdownRole = ({ selected, setSelected, className }) => {
               <li key={option.name} className="flex">
                 <button
                   className={clsx(
-                    "pl-5 py-3 xl:py-4 pr-2 w-full border-none focus:outline-none flex justify-between space-x-2  items-center",
+                    "rounded-none pl-5 py-3 xl:py-4 pr-2 w-full border-none focus:outline-none flex justify-between space-x-2  items-center",
                     isSelected
                       ? "bg-[#F0F0F0]"
                       : "bg-[#EBF5FF] hover:bg-[F0F0F0]"
