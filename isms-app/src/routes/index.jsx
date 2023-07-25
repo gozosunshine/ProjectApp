@@ -48,7 +48,7 @@ const privateRoutes = [
   {
     path: ROUTES_PATHS.ADMIN_ROLE,
     component: Page.AdminRole,
-    layout: Layout.CustomLayout,
+    layout: Layout.CustomLayout2,
   },
 ];
 
