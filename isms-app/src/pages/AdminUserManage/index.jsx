@@ -18,14 +18,14 @@ const AdminUserManage = () => {
     <div className="bg-[#F7F7F7] text-[#727272]">
       <div className="mx-auto max-w-7xl px-5 py-[60px]">
         <h6 className="font-semibold text-2xl xl:text-4xl">
-          System Role Management
+          System User Management
         </h6>
 
         <div className="mt-8 xl:mt-16 flex space-x-6 xl:space-x-10">
           <div className="relative">
             <input
               type="text"
-              className="border-[#CECDCD] py-2 pr-2 focus:outline-none pl-10 border-2"
+              className="border-[#CECDCD] py-2 xl:py-3 pr-2 focus:outline-none pl-10 border-2"
             />
             <div className="absolute flex h-full top-0 left-2 items-center">
               <svg

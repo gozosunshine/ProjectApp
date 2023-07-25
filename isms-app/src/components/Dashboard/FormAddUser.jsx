@@ -24,7 +24,7 @@ const FormAddUser = ({ open, setOpen }) => {
                 <label className="text-[#647186] text-base font-semibold xl:text-lg">
                   Work Email
                 </label>
-                <input className="mt-3 w-full rounded-lg py-1.5 bg-[#F1F1F1] focus:outline-none text-black" />
+                <input className="mt-3 w-full rounded-lg py-1.5 px-5 bg-[#F1F1F1] focus:outline-none text-black" />
               </div>
             </div>
             <div className="space-x-5 xl:space-x-8 mt-3">
