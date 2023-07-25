@@ -90,7 +90,7 @@ const TableRoles = ({ data, setCurrentRoles }) => {
   };
 
   return (
-    <div>
+    <div className="overflow-auto">
       <table className={clsx(styles.table, "w-full text-left mt-8 xl:mt-16")}>
         <tr>
           <th>Role Name</th>
