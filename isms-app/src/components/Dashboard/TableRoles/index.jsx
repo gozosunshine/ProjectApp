@@ -73,6 +73,13 @@ const TableItem = ({ item, setCurrentRoles, currentIndex, setOpen }) => {
   );
 };
 
+export const roles = [
+  { name: "Administrator", desc: "Description for IT Service Administrator" },
+  { name: "Team Member", desc: "Description for IT Service Administrator" },
+  { name: "Service Owner", desc: "Description for IT Service Administrator" },
+  { name: "Customer", desc: "Description for IT Service Administrator" },
+];
+
 const TableRoles = ({ data, setCurrentRoles }) => {
   const [open, setOpen] = useState(false);
   // const [selectedRole, setSelectedRole] = useState();

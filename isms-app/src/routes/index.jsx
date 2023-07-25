@@ -50,6 +50,11 @@ const privateRoutes = [
     component: Page.AdminRole,
     layout: Layout.CustomLayout2,
   },
+  {
+    path: ROUTES_PATHS.ADMIN_USERS,
+    component: Page.AdminUserManage,
+    layout: Layout.CustomLayout2,
+  },
 ];
 
 export { publicRoutes, privateRoutes };

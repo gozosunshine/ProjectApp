@@ -7,3 +7,4 @@ export { default as AdminTicket } from "./AdminTicket";
 export { default as AdminUser } from "./AdminUser";
 export { default as AdminReport } from "./AdminReport";
 export { default as AdminRole } from "./AdminRole";
+export { default as AdminUserManage } from "./AdminUserManage";

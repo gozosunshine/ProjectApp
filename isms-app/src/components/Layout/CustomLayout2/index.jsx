@@ -2,9 +2,9 @@ import AdminHeader from "./AdminHeader";
 
 function CustomLayout({ children }) {
   return (
-    <div className="h-screen relative">
+    <div className="relative bg-[#F7F7F7] min-h-[100vh]">
       <AdminHeader />
-      <div className=" h-[90vh] relative"> {children}</div>
+      {children}
       <div className="fixed right-5 bottom-5 bg-black w-[66px] rounded-full flex items-center justify-center cursor-pointer h-[66px]">
         <svg
           xmlns="http://www.w3.org/2000/svg"

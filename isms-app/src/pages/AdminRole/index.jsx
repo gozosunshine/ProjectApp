@@ -1,16 +1,11 @@
 import React, { useState } from "react";
-import TableRoles from "../../components/Dashboard/TableRoles";
+import TableRoles, { roles } from "../../components/Dashboard/TableRoles";
 import MessageError from "../../components/Dashboard/MessageError";
 
 const AdminRole = () => {
   const [newRole, setNewRole] = useState(" ");
   const [desc, setDesc] = useState(" ");
-  const [currentRoles, setCurrentRoles] = useState(
-    Array(3).fill({
-      name: "Administrator",
-      desc: "Description for IT Service Administrator",
-    })
-  );
+  const [currentRoles, setCurrentRoles] = useState(roles);
 
   return (
     <div className="bg-[#F7F7F7] text-[#727272]">
