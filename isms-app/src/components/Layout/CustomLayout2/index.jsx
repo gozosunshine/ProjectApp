@@ -1,4 +1,4 @@
-import AdminHeader from "./AdminHeader";
+import AdminHeader from "../components/AdminHeader";
 
 function CustomLayout({ children }) {
   return (

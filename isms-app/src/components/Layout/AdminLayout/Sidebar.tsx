@@ -74,7 +74,7 @@ const Sidebar = () => {
   const location = useLocation();
   const navigate = useNavigate();
   return (
-    <aside className="bg-[#E0ECF2] pl-2 hidden lg:flex space-y-[70px] flex-col w-0  lg:w-[250px] xl:w-[300px] h-screen absolute top-0 left-0 shadow-xl">
+    <aside className="bg-[#E0ECF2] pl-2 hidden lg:flex space-y-[70px] flex-col w-0 lg:w-[250px] xl:w-[300px] shadow-xl">
       <div className="flex w-[200px] mx-auto">
         <img src="/images/logo.png" alt="" />
       </div>
