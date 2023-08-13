@@ -78,7 +78,6 @@ const TableItem = ({
   setOpenDeactive,
   setOpenAssign,
 }) => {
-  const [isEdit, setIsEdit] = useState(false);
   const [user, setUser] = useState(item?.name);
   const [email, setEmail] = useState(item?.email);
   const [role, setRole] = useState(item?.role);
@@ -86,40 +85,8 @@ const TableItem = ({
 
   return (
     <tr>
-      <td>
-        <div className="flex">
-          <input
-            type="text"
-            value={user}
-            onChange={(e) => {
-              setUser(e.target.value);
-            }}
-            className={clsx(
-              "px-3 py-1.5 rounded-lg bg-transparent border-2",
-              isEdit ? "border-[#CCC9C9]" : "border-transparent"
-            )}
-            disabled={!isEdit}
-            style={{
-              boxShadow: isEdit && "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
-            }}
-          />
-        </div>
-      </td>
-      <td>
-        <input
-          type="text"
-          value={email}
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
-          disabled={!isEdit}
-          className={clsx(
-            "px-3 py-1.5 rounded-lg bg-transparent border-2",
-            isEdit ? "border-[#CCC9C9]" : "border-transparent"
-          )}
-          style={{ boxShadow: isEdit && "0px 4px 4px 0px rgba(0, 0, 0, 0.25)" }}
-        />
-      </td>
+      <td className="px-3 py-1.5 rounded-lg bg-transparent">{user}</td>
+      <td className={clsx("px-3 py-1.5 rounded-lg bg-transparent")}>{email}</td>
       <td>0123456789</td>
       <td>Admin</td>
       <td>

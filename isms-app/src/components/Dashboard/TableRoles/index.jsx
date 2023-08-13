@@ -92,35 +92,13 @@ const TableItem = ({ item, setCurrentRoles, currentIndex, setOpen }) => {
   return (
     <tr>
       <td>
-        <input
-          type="text"
-          value={roleName}
-          onChange={(e) => {
-            setRoleName(e.target.value);
-          }}
-          className={clsx(
-            "px-3 py-1.5 rounded-lg bg-transparent border-2",
-            isEdit ? "border-[#CCC9C9]" : "border-transparent"
-          )}
-          disabled={!isEdit}
-          style={{ boxShadow: isEdit && "0px 4px 4px 0px rgba(0, 0, 0, 0.25)" }}
-        />
+        <p className={clsx("px-3 py-1.5 rounded-lg bg-transparent")}>
+          {roleName}
+        </p>
         {!roleName && <MessageError error={"Role name is required"} />}
       </td>
       <td>
-        <input
-          type="text"
-          value={desc}
-          onChange={(e) => {
-            setDesc(e.target.value);
-          }}
-          disabled={!isEdit}
-          className={clsx(
-            "px-3 py-1.5 rounded-lg bg-transparent border-2",
-            isEdit ? "border-[#CCC9C9]" : "border-transparent"
-          )}
-          style={{ boxShadow: isEdit && "0px 4px 4px 0px rgba(0, 0, 0, 0.25)" }}
-        />
+        <p className={clsx("px-3 py-1.5 rounded-lg bg-transparent")}>{desc}</p>
         {!desc && <MessageError error={"Description is required"} />}
       </td>
       <td className="space-x-10 flex items-center">
