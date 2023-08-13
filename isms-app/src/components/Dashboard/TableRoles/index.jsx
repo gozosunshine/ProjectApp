@@ -148,9 +148,9 @@ const TableItem = ({ item, setCurrentRoles, currentIndex, setOpen }) => {
             <IconDelete />
           </button>
         </div>
-        <button className="focus:outline-none border-0">
+        {/* <button className="focus:outline-none border-0">
           <IconView />
-        </button>
+        </button> */}
       </td>
     </tr>
   );
