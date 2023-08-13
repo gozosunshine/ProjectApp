@@ -51,6 +51,16 @@ const privateRoutes = [
     layout: Layout.CustomLayout2,
   },
   {
+    path: ROUTES_PATHS.ADMIN_ROLE_EDIT,
+    component: Page.AdminRoleEdit,
+    layout: Layout.CustomLayout2,
+  },
+  {
+    path: ROUTES_PATHS.ADMIN_ROLE_PERMISSION_ADD,
+    component: Page.AdminRolePermissionAdd,
+    layout: Layout.CustomLayout2,
+  },
+  {
     path: ROUTES_PATHS.ADMIN_USERS,
     component: Page.AdminUserManage,
     layout: Layout.CustomLayout2,

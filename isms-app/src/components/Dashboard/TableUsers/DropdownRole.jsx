@@ -18,7 +18,13 @@ const IconArrowDown = () => (
   </svg>
 );
 
-const DropdownRole = ({ selected, setSelected, className }) => {
+const DropdownRole = ({
+  selected,
+  setSelected,
+  className,
+  style,
+  inputClassName,
+}) => {
   const [open, setOpen] = useState(false);
 
   const ref = useClickAway(() => {
@@ -36,6 +42,7 @@ const DropdownRole = ({ selected, setSelected, className }) => {
         e.preventDefault();
         setOpen(true);
       }}
+      style={style}
     >
       <div>
         <div className="border-0 hover:border-0 flex justify-between rounded-none items-center w-full text-start focus:outline-none">
