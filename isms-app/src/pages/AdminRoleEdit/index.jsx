@@ -29,9 +29,9 @@ const AdminRoleEdit = () => {
             <label className="text-[#647186] text-base font-semibold xl:text-lg w-[160px]">
               Role Name
             </label>
-            <div>
+            <div className="flex-1">
               <input
-                className="w-full rounded-lg py-1.5 px-5 border-2 max-w-[275px] border-[#CCC9C9] focus:outline-none text-black flex-1"
+                className="w-full rounded-lg py-1.5 px-5 border-2 border-[#CCC9C9] focus:outline-none text-black max-w-[275px]"
                 style={{ boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)" }}
               />
               {!roleName && <MessageError error={"Role name is required"} />}
@@ -41,9 +41,9 @@ const AdminRoleEdit = () => {
             <label className="text-[#647186] text-base font-semibold xl:text-lg w-[160px]">
               Description
             </label>
-            <div>
+            <div className="flex-1">
               <textarea
-                className="min-h-[105px] w-full max-w-[512px] rounded-lg py-1.5 px-5 border-2 border-[#CCC9C9] focus:outline-none text-black flex-1"
+                className="min-h-[105px] max-w-[512px] w-full rounded-lg py-1.5 px-5 border-2 border-[#CCC9C9] focus:outline-none text-black"
                 style={{ boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)" }}
               />
               {!desc && <MessageError error={"Description is required"} />}
