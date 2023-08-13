@@ -48,22 +48,22 @@ const privateRoutes = [
   {
     path: ROUTES_PATHS.ADMIN_ROLE,
     component: Page.AdminRole,
-    layout: Layout.CustomLayout2,
+    layout: Layout.AdminLayout,
   },
   {
     path: ROUTES_PATHS.ADMIN_ROLE_EDIT,
     component: Page.AdminRoleEdit,
-    layout: Layout.CustomLayout2,
+    layout: Layout.AdminLayout,
   },
   {
     path: ROUTES_PATHS.ADMIN_ROLE_PERMISSION_ADD,
     component: Page.AdminRolePermissionAdd,
-    layout: Layout.CustomLayout2,
+    layout: Layout.AdminLayout,
   },
   {
     path: ROUTES_PATHS.ADMIN_USERS,
     component: Page.AdminUserManage,
-    layout: Layout.CustomLayout2,
+    layout: Layout.AdminLayout,
   },
 ];
 

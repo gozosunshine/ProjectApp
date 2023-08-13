@@ -17,8 +17,13 @@ export const sidebarMenus = {
     },
     {
       icon: "/images/icon-user.svg",
-      label: "User",
-      href: ROUTES_PATHS.ADMIN_USER,
+      label: "Users",
+      href: ROUTES_PATHS.ADMIN_USERS,
+    },
+    {
+      icon: "/images/icon-user.svg",
+      label: "Roles",
+      href: ROUTES_PATHS.ADMIN_ROLE,
     },
     {
       icon: "/images/icon-report.svg",
