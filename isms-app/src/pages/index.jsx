@@ -10,3 +10,4 @@ export { default as AdminRole } from "./AdminRole";
 export { default as AdminRoleEdit } from "./AdminRoleEdit";
 export { default as AdminRolePermissionAdd } from "./AdminRolePermissionAdd";
 export { default as AdminUserManage } from "./AdminUserManage";
+export { default as AdminStatistics } from "./AdminStatistics";

@@ -26,6 +26,11 @@ export const sidebarMenus = {
       href: ROUTES_PATHS.ADMIN_ROLE,
     },
     {
+      icon: "/images/icon-user.svg",
+      label: "Statistics",
+      href: ROUTES_PATHS.ADMIN_STATISTICS,
+    },
+    {
       icon: "/images/icon-report.svg",
       label: "Report",
       href: ROUTES_PATHS.ADMIN_REPORT,

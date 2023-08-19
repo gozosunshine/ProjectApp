@@ -9,4 +9,5 @@ export const ROUTES_PATHS = {
   ADMIN_ROLE_EDIT: "/admin/manage/role/edit",
   ADMIN_ROLE_PERMISSION_ADD: "/admin/manage/role/permission",
   ADMIN_USERS: "/admin/manage/users",
+  ADMIN_STATISTICS: "/admin/manage/statistics",
 };
