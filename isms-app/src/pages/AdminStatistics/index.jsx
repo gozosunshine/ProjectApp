@@ -70,22 +70,26 @@ const AdminStatistics = () => {
           <LineChartCreatedAndResolved data={data?.[dateRanges?.value]} />
 
           <table className={clsx(styles.table, "w-full text-left")}>
-            <tr>
-              <th>Date</th>
-              <th>Created</th>
-              <th>Resolved</th>
-            </tr>
-            {data?.[dateRanges?.value]?.created?.map((item, index) => (
-              <tr key={index}>
-                <td>{item?.x}</td>
-                <td>{item?.y.toFixed(2)}</td>
-                <td>
-                  {data?.[dateRanges?.value]?.resolved
-                    ?.find((i) => i?.x === item?.x)
-                    ?.y.toFixed(2)}
-                </td>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Created</th>
+                <th>Resolved</th>
               </tr>
-            ))}
+            </thead>
+            <tbody>
+              {data?.[dateRanges?.value]?.created?.map((item, index) => (
+                <tr key={index}>
+                  <td>{item?.x}</td>
+                  <td>{item?.y.toFixed(2)}</td>
+                  <td>
+                    {data?.[dateRanges?.value]?.resolved
+                      ?.find((i) => i?.x === item?.x)
+                      ?.y.toFixed(2)}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
           </table>
         </div>
       </div>

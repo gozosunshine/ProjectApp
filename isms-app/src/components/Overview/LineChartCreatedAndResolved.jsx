@@ -25,6 +25,7 @@ ChartJS.register(
 
 const options = {
   responsive: true,
+  maintainAspectRatio: false,
   plugins: {
     legend: {
       position: "bottom",
@@ -66,7 +67,7 @@ const LineChartCreatedAndResolved = ({ data }) => {
   return (
     <section>
       <div className="w-full">
-        <Line options={options} data={dataConfig} />
+        <Line options={options} data={dataConfig} className="h-[450px]" />
       </div>
       <ul className="flex flex-wrap justify-center gap-x-[60px]">
         <li>
